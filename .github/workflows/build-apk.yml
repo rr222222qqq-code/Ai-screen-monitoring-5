@@ -1,20 +1,9 @@
-name: Build APK
+name: Test
 
-on:
-workflow_dispatch:
+on: workflow_dispatch
 
 jobs:
-build:
+test:
 runs-on: ubuntu-latest
 steps:
-- name: Checkout code
-uses: actions/checkout@v4
-
-  - name: Setup JDK
-    uses: actions/setup-java@v4
-    with:
-      distribution: temurin
-      java-version: '17'
-
-  - name: Build status
-    run: echo "GitHub Actions is working"
+- run: echo "Hello"
